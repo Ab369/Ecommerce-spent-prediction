@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+<body>
+    <h1>Amount Spent Prediction</h1>
+    <!-- method need to be same as server accepts -->
+    <form action="http://127.0.0.1:5000/predict" method="POST">
+        <p>Avg. Session Length</p>
+        <input type="text" name="sl">
+        <p>Time on App</p>
+        <input type="text" name="toa">
+        <p>Time on Website</p>
+        <input type="text" name="tow">
+        <p>Length of Membership</p>
+        <input type="text" name="lom">
+        <input type="submit" value="submit">
+    </form>
+
+    <!-- using result sent by server app.py -->
+    <h3>Predicted Spent:{{result}}</h3>
+</body>
+</html>
